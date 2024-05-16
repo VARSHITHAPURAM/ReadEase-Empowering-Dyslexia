@@ -1,0 +1,410 @@
+@font-face {
+    font-family: opendyslexic;
+    src: url("./OpenDyslexic.otf");
+  }
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: opendyslexic;
+}
+
+body{
+    background: #ddc6c6;
+    margin: 10px;
+    height: fit-content;
+}
+nav {
+    height: 80px;
+    width: 100%;
+    background: white;
+}
+
+label.logo {
+    color:#2C3863;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+    
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    color: #2C3863;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+}
+
+a.active,a:hover{
+    background: #ddc6c6;
+    transition: .5s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: #2C3863;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 952px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover, a.active{
+        background: none;
+    }
+}
+
+    #check:checked ~ ul{
+        left: 0;
+    }
+
+
+img {
+    margin: 5%;
+    max-width: 25%;
+    max-height: 15%;
+    float: left;
+    }
+
+
+
+.border {
+    border-style:dotted;
+    border-top-left-radius: 4px 2px;
+    border-top-right-radius: 3px 4px;
+    border-bottom-right-radius: 6px 2px;
+    border-bottom-left-radius: 3px 4px;
+    width: fit-content;
+    background-color: white;
+    }
+
+#waitingspongebob{
+    margin: 5%;
+    margin-top:0%;
+    max-width: 40%;
+    max-height:40%;
+    float: left;
+}
+
+.belowbongo{
+    width: 85%;
+    margin: 2%;
+    text-align: left;
+}
+
+
+.rounded {
+    border: dotted;
+    border-radius: 25px;
+    padding: 30px; 
+    width: fit-content;
+    height: fit-content;
+    margin: 20px;
+  }
+
+
+#offers {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+
+.leftfloat{
+    transform: scale(0.8);
+    margin-left: 10%;
+    max-width: 13%;
+    max-height: auto;
+    float: right;
+
+}
+.rightfloat{
+    transform: scale(0.8);
+    margin-left: 10%;
+    max-width: 13%;
+    max-height: auto;
+    float: right;
+
+}
+
+.rightrightfloat{
+    transform: scale(0.8);
+    margin-left: 10%;
+    max-width: 13%;
+    max-height: auto;
+    float: right;
+
+}
+
+.inlinetext{
+    margin-top: 5%;
+}
+
+.abouttext{
+    margin-top: -3.5%;
+    margin-left: 10%;
+    float: left;
+    text-align: center;
+}
+
+.abouttextmid{
+    margin-top: -3.5%;
+    margin-left: 10%;
+    float: left;
+    text-align: center;
+}
+.abouttxt{
+    margin-top: -3.5%;
+    margin-left: 10%;
+    float: left;
+    text-align: center;
+}
+
+.getstartedbutton{
+    margin-bottom: 0.2%;
+}
+
+#bongo{
+    margin: 5%;
+    max-width: 13%;
+    max-height: auto;
+    float: left;
+}
+
+.word-button {
+    background: none;
+    border:none;
+}
+
+.word-button:hover{
+    color: #f9048c;
+    transition: all .5s;
+}
+
+#summary-button {
+    float: right;
+}
+
+#summary {
+    float: right;
+    position:  absolute;
+}
+
+.learn {
+    font-size: 35px;
+    border-radius: 5%;
+    margin-left:35%;
+}
+
+.learn button {
+    cursor: pointer;
+}
+
+.homepagetxt {
+    margin-top: 5%;
+}
+
+form {
+    margin-top:1%;
+    transform: scale(1.2);
+}
+
+#orig-text  {
+    margin-left: 65%;
+    margin-top: 12%;
+ }
+
+.upload-new {
+    margin-left: 73%;
+    transform: scale(1.7);
+ }
+
+
+#buttonofword{
+    margin-left: 40%;
+    margin-bottom: -2%;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 50px;
+}
+
+
+#submit-spelling {
+    margin-left: 53.8%;
+}
+
+.correct {
+    margin:0%;
+    display:inline-block;
+    font-size: 55px;
+    border-radius: 5%;
+    padding:0.5%;
+    text-align: justify;
+}
+
+#number-0 {
+    color:aqua;
+}
+
+#tryagain-spelling {
+    margin-left:30%;
+}
+
+#recordbutton{
+    border: none;
+    background: transparent;
+    width: 5%;
+    margin-left: 1%;
+    margin-top: 2%;
+}
+
+#story{
+    margin-left: 5%;
+    margin-top: -2.8%;
+}
+
+.ulinsreading li {
+    border-radius: 13px;
+    background: white;
+    border-color: #2C3863;
+    margin: 1%;
+    width: fit-content;
+}
+
+.readingcongrats{
+    margin-left:13%;
+    margin-top: 3%;
+
+}
+
+.woohoo{
+    margin-top: -9.5%;
+    margin-left: 0%;
+    width: 17%;
+}
+
+#startlearn{
+    margin-top: 4%;
+    margin-left: -21%;
+    font-size: 125%;
+    border-radius: 8px;
+}
+.sad{
+    margin-top: -4.5%;
+    margin-left: 1.5%;
+    width: 5%;
+}
+
+.incorrect{
+    margin-left:9%;
+    margin-top: 1%;
+}
+
+#startlearn2{
+    margin-top: 3%;
+    margin-left: -10%;
+    font-size: 95%;
+    border-radius: 8px;
+}
+
+.needborder{
+    border-radius: 13px;
+    background: white;
+    border-color: #2C3863;
+    margin: 1%;
+    width: fit-content;
+}
+
+.biggerfont{
+    font-size: 30px;
+    
+    display:inline;
+}
+
+#newwordbutton{
+    font-size: 200%;
+    border-radius: 8px;
+    margin-left:10%;
+}
+
+.morebutton {
+    display: flex;
+}
+
+#quitbutton {
+    font-size: 200%;
+    border-radius: 8px;
+    margin-left:4%;
+}
+
+#single-word-button {
+    text-align : center;
+    border: none;
+    background: transparent;
+    width: 5%;
+    margin-top: 2%;
+    display: inline;
+}
+
+#single-word {
+    display:inline;
+    margin-left: -2.5%;
+    border-radius: 8px;
+}
+
+.audios {
+    margin-left: 40%;
+}

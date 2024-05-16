@@ -1,0 +1,219 @@
+@font-face {
+    font-family: opendyslexic;
+    src: url("./OpenDyslexic.otf");
+  }
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: opendyslexic;
+}
+
+body{
+    background: #ddc6c6;
+    margin: 10px;
+    height: fit-content;
+}
+nav {
+    height: 80px;
+    width: 100%;
+    background: white;
+}
+
+label.logo {
+    color:black;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+    
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    color: #2C3863;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+}
+
+a.active,a:hover{
+    background: #ddc6c6;
+    transition: .5s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: black;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 952px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover, a.active{
+        background: none;
+    }
+}
+
+    #check:checked ~ ul{
+        left: 0;
+    }
+
+
+img {
+    margin: 5%;
+    max-width: 25%;
+    max-height: 15%;
+    float: left;
+    }
+
+
+
+.border {
+    border-style:dotted;
+    border-top-left-radius: 4px 2px;
+    border-top-right-radius: 3px 4px;
+    border-bottom-right-radius: 6px 2px;
+    border-bottom-left-radius: 3px 4px;
+    width: fit-content;
+    background-color: white;
+    }
+
+#waitingspongebob{
+    margin: 5%;
+    max-width: 40%;
+    max-height:40%;
+    float: left;
+}
+
+.belowbongo{
+    width: 85%;
+    margin: 5%;
+    text-align: left;
+}
+
+.rounded {
+    border: dotted;
+    border-radius: 25px;
+    padding: 30px; 
+    width: fit-content;
+    height: fit-content;
+    margin: 20px;
+  }
+
+#offers {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+
+.leftfloat{
+    max-width: 13%;
+    max-height: auto;
+    float: right;
+
+}
+.rightfloat{
+    transform: scale(0.8);
+    margin-left: 10%;
+    max-width: 13%;
+    max-height: auto;
+    float: right;
+
+}
+
+.rightrightfloat{
+    transform: scale(0.8);
+    margin-left: 20%;
+    max-width: 13%;
+    max-height: auto;
+    float: right;
+
+}
+
+.abouttext{
+    margin-top: -3.5%;
+    margin-left: 57px;
+    float: left;
+    text-align: center;
+}
+
+.inlinetext{
+    margin-top: 1.5%;
+}
+
+.abouttextmid{
+    margin-top: -3.5%;
+    margin-left: 5%;
+    float: left;
+    text-align: center;
+}
+.abouttxt{
+    margin-top: -23.5%;
+    margin-left: 35%;
+    float: left;
+    text-align: center;
+}
+
+.getstartedbutton{
+    margin-bottom: 0.2%;
+}
+
+#bongo{
+    margin: 5%;
+    max-width: 200px;
+    max-height: auto;
+    float: left;
+}
