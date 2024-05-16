@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<nav>
+    <input type="checkbox" id="check"> 
+    <label for="check" class="checkbtn">
+        <i class="fa fa-bars"></i>
+    </label>
+    <label class="logo">ReadEase</label>
+    <ul class='navbar'>
+      <li id='aa'><a href="/"  >Home</a></li>
+      <li id='bb'><a href="/about">About Us</a></li>
+      <li id='cc'><a href="/features" class="active">Features</a></li>
+    </ul>
+</nav>
+    <img id="bongo" src="{{ url_for('static', filename='img/bongocat.png') }}"/>
+    <img id="bongo" src="{{ url_for('static', filename='img/bongocat.png') }}"/>
+    <img id="bongo" src="{{ url_for('static', filename='img/bongocat.png') }}"/>
+    <img id="bongo" src="{{ url_for('static', filename='img/bongocat.png') }}"/>
+    <br><br><br><br><br><br>
+    <div class="belowbongo">
+        <h2 onclick="toSound(this)" style="cursor:pointer">WE OFFER YOU...</h2>
+        <div id="offers">
+            <section class="rounded">
+                <h3 onclick="toSound(this)" style="cursor:pointer">Dyslexia-Friendly Font Conversion & Text-to-Speech Conversion</h3>
+                <i class="fas fa-images"></i>
+                <i class="fas fa-headphones"></i>
+                <br>
+                <a href="/upload">
+                    <button>Convert Here</button>
+                </a>
+            </section>
+            <section class="rounded">
+                <h3 onclick="toSound(this)" style="cursor:pointer">Reading Exercises</h3>
+                <i class="fas fa-book-reader"></i>
+                <i class="fas fa-microphone"></i>
+                <br>
+                <a href="/audio">
+                    <button>Start Reading</button>
+                </a>
+            </section>
+            <section class="rounded">
+                <h3 onclick="toSound(this)" style="cursor:pointer">Spelling Exercises</h3>
+                <i class="fas fa-keyboard"></i>
+                <i class="fas fa-spell-check"></i>
+                <br>
+                <a href="/learn">
+                    <button>Start Typing</button>
+                </a>
+            </section>
+        </div>
+    </div>
+{% endblock %}  

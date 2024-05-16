@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<nav>
+    <input type="checkbox" id="check"> 
+    <label for="check" class="checkbtn">
+        <i class="fa fa-bars"></i>
+    </label>
+    <label class="logo">ReadEase</label>
+    <ul class='navbar'>
+      <li id='aa'><a href="/"  >Home</a></li>
+      <li id='bb'><a href="/about">About Us</a></li>
+      <li id='cc'><a href="/features" class="active">Features</a></li>
+    </ul>
+</nav>
+    {% if not converted_text %}
+        
+        <img id="waitingspongebob" src="{{url_for('static', filename='img/waiting.png')}}"/>
+        <br><br><br><br><br>
+        <form method="POST" enctype="multipart/form-data">
+            <i class="fas fa-upload"></i>
+            <input class = 'border' type = "file" name="file" method = 'post' id = "uploadedfile" required/>
+            <button>submit</button>
+        </form>
+        
+    
+    
+    {% else %}
+        
+        
+        {% for i in range(data_size) %}
+            {% if d["conf"][i] >= 60 %}
+                <button class="word-button" onclick="toSound(this)" style="cursor:pointer;position:absolute;top:{{ d['top'][i] }}px;left:{{  d['left'][i] }}px;width:{{ d['width'][i] }}px;height:{{ d['height'][i] }}px;font-size:{{ font_size }}px">{{ d['text'][i] }}</button>
+            {% endif %}
+        {% endfor %}
+        
+        <img id="orig-text" src="{{ img_src }}">
+        <a href="/upload">
+            <button class="upload-new border">Upload a New File</button>
+        </a>
+    {% endif %}
+
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<nav>
+    <input type="checkbox" id="check"> 
+    <label for="check" class="checkbtn">
+        <i class="fa fa-bars"></i>
+    </label>
+    <label class="logo">ReadEase</label>
+    <ul class='navbar'>
+      <li id='aa'><a href="/"  >Home</a></li>
+      <li id='bb'><a href="/about">About Us</a></li>
+      <li id='cc'><a href="/features" class="active">Features</a></li>
+    </ul>
+</nav>
+    </br>
+    
+    {% if not correct or correct=="false" and single_word %}
+        <h3><ul class="ulinsreading">
+            <li onclick="toSound(this)" style="cursor:pointer">Look at the word carefully and read it out. </li>
+            <li onclick="toSound(this)" style="cursor:pointer">If you are unsure about the word's don't worry!</li>
+            <li onclick="toSound(this)" style="cursor:pointer">You have the option to listen to the word by clicking on the word itself.</li>
+        </ul></h3>
+        <br><br>
+        <a href="/speech-start"><button id="single-word-button" class="learn" style="cursor:pointer;margin-left:42%"><img id="micimg" src="{{ url_for('static', filename='img/mic.png') }}"></button></a> 
+        <button onclick="toSound(this)" class="learn" id="single-word">{{ word }}</button>
+        </br></br><br>
+    
+    {% endif %}
+    {% if not single_word %}
+        {% if text %}
+            <p>{{ text }}</p>
+            <p>You got {{ score }} score </p>
+            <p>Wrong words {{ ', '.join(incorrect) }}</p>
+            <a href="/speech-start"><button class="learn" style="cursor:pointer">Next Word</button></a> 
+            
+        {% endif %}
+    {% else %}
+        {% if correct=="true" %}
+            <br><br><br><br>
+            <p class="learn" style="margin-left:40%;">Correct!</p>
+            <br>
+            <a href="/speech"><button class="learn" style="cursor:pointer;margin-left:40%;">Next Word</button></a>
+        {% else %}
+            <p class="learn" id="correct-speech" style="margin-left:20%;">Sorry, still incorrect. Here is what you said :   </p>
+            <br>
+            <div class="audios">
+                <audio controls>
+                <source src='static/recorded_sound/recorder.wav' type="audio/mpeg">
+                Your browser does not support the audio element.
+                </audio>
+            </div>
+            <p class="learn" style="margin-left:30%;">It sounded like "{{ text }}"</p>
+            <br>
+            <a href="/speech"><button class="learn" style="cursor:pointer;margin-left:42%">Try Again</button></a>
+        {% endif %}
+    {% endif %}
+{% endblock %}

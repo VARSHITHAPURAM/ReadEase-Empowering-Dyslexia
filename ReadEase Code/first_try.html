@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<nav>
+    <input type="checkbox" id="check"> 
+    <label for="check" class="checkbtn">
+        <i class="fa fa-bars"></i>
+    </label>
+    <label class="logo">ReadEase</label>
+    <ul class='navbar'>
+      <li id='aa'><a href="/"  >Home</a></li>
+      <li id='bb'><a href="/about">About Us</a></li>
+      <li id='cc'><a href="/features" class="active">Features</a></li>
+    </ul>
+</nav>
+<br>
+<h3 class="learn">Congratulations!</h3>
+<h3 class="learn" style="margin-left:28%;">You got it on a first try</h3>
+<h3 class="learn" style="margin-left:10%">You got this cool AI generated picture from previous story!</h3>
+<img src={{ url_for('static', filename=filename) }} style="margin-bottom:-10%;margin-top:1%;margin-left:35%;width:500px;height:500px;display:block">
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br>
+
+
+<h3 style="float:center;text-align:center;margin-top:0%">{{ caption }}</h3>
+<br>
+<a href="/audio"><button class="learn" style="cursor:pointer;margin-left:40%;padding-top:">Learn Again?</button></a>
+    
+{% endblock %}

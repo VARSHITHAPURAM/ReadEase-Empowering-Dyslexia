@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+{% block content %}
+<nav>
+    <input type="checkbox" id="check"> 
+    <label for="check" class="checkbtn">
+        <i class="fa fa-bars"></i>
+    </label>
+    <label class="logo">ReadEase</label>
+    <ul class='navbar'>
+      <li id='aa'><a href="/" class='active' >Home</a></li>
+      <li id='bb'><a href="/about">About Us</a></li>
+      <li id='cc'><a href="/features">Features</a></li>
+    </ul>
+</nav>
+    <section class="function">
+    <img src="{{ url_for('static', filename='img/reading.png') }}">
+    </section>
+    <br><br><br>
+    <section class="homepagetxt">
+        <h1 onclick="toSound(this)" style="cursor:pointer">Welcome to Our Dyslexia Support Website!</h1><br>
+        <h4 onclick="toSound(this)" style="cursor:pointer">We get it - words can sometimes feel like tricky puzzles,<br>but we've got your back! We've created a platform that<br> tailored specifically to help dyslexic individuals thrive.</h4><br>
+        <h4 onclick="toSound(this)" style="cursor:pointer">Let us introduce you to our world of features.</h4><br>
+    </section>
+    <a href="/features">
+        <button class="getstartedbutton">Get Started</button>
+    </a>
+    <br>
+    <a href="/about">
+        <button> Learn More</button>
+    </a>
+
+{% endblock %}

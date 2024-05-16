@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+{% block content %}
+<nav>
+    <input type="checkbox" id="check"> 
+    <label for="check" class="checkbtn">
+        <i class="fa fa-bars"></i>
+    </label>
+    <label class="logo">ReadEase</label>
+    <ul class='navbar'>
+      <li id='aa'><a href="/"  >Home</a></li>
+      <li id='bb'><a href="/about" class='active'>About Us</a></li>
+      <li id='cc'><a href="/features" >Features</a></li>
+    </ul>
+</nav>
+    <div id="offers">
+        <img class="leftfloat" src="{{ url_for('static', filename='img/inclusion.png') }}"/>
+        
+        <h1 onclick="toSound(this)" style="cursor:pointer" class="inlinetext"><br>OUR MISSION</h1>
+        <img class ="rightfloat" src="{{ url_for('static', filename='img/question.png') }}"/>
+        <h1 onclick="toSound(this)" style="cursor:pointer" class="inlinetext" ><br>Why Us?</h1>
+        <img class ="rightrightfloat" src="{{ url_for('static', filename='img/team.png') }}"/>
+        <h1 onclick="toSound(this)" style="cursor:pointer" class="inlinetext"><br>OUR TEAM</h1>
+    </div>
+    <h4 onclick="toSound(this)" style="cursor:pointer" class="abouttext">We are dedicated to creating a <br>digital platform that embraces<br> diversity, breaks down 
+        barriers,<br> and empowers individuals of all <br>backgrounds and abilities to <br>access, 
+        understand, and engage<br>with information seamlessly. We<br> believe that education is a <br>powerful tool for empowerment. <br>Through our features like <br> spelling and reading exercises, <br>we strive 
+        to enhance language<br> skills for dyslexic learners.</h4>
+    <h4 onclick="toSound(this)" style="cursor:pointer" class="abouttextmid">When you choose our platform,<br> you are choosing the platform<br> that understands the unique<br> challenges of dyslexic learners. <br> We recognize the transformative 
+        <br> power of technology in overcoming<br> challenges. 
+        We offer technology<br> solutions that aid reading<br> and 
+        improve spelling skills.<br> These tools enhance learning<br>
+        while boosting the confidence<br>  and independence
+        of learners.</h4>
+    <h4 onclick="toSound(this)" style="cursor:pointer" class="abouttxt" >Behind ReadEase stands<br>
+        two passionate individuals<br> committed to creating a<br> platform that
+        embraces<br> inclusivity and diversity. <br><br>Please don't hesitate<br> to contact us if you have<br> any questions, concerns, or<br> would like more information.
+        <br>Always here for you!
+        <br>
+        <a href="https://instagram.com/kimberlymichela?igshid=OGQ5ZDc2ODk2ZA==">
+        <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://instagram.com/nfldty?igshid=OGQ5ZDc2ODk2ZA==">
+        <i class="fa-brands fa-instagram"></i>
+        </a>
+    </h4>
+{% endblock %}  

@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<nav>
+    <input type="checkbox" id="check"> 
+    <label for="check" class="checkbtn">
+        <i class="fa fa-bars"></i>
+    </label>
+    <label class="logo">ReadEase</label>
+    <ul class='navbar'>
+      <li id='aa'><a href="/"  >Home</a></li>
+      <li id='bb'><a href="/about">About Us</a></li>
+      <li id='cc'><a href="/features" class="active">Features</a></li>
+    </ul>
+</nav>
+    {% if message %}
+        <p onclick="toSound(this)" style="cursor:pointer" class="learn needborder">{{ message }} You did a great job! Your current score is {{ score }}.</p>
+    {% endif %}
+</br>
+    <div class="more-button">
+        <p class="needborder biggerfont" onclick="toSound(this)" style="cursor:pointer">Do you want to earn more score? Practice More!</p></br> </br> </br>
+        <a href="/learn"><button href="/learn" id="newwordbutton" style="cursor:pointer">New Word</button></a>
+        <a href="/finished"><button class="learn" style="cursor:pointer" id="quitbutton">Quit</button></a>
+    </div>
+          
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<nav>
+    <input type="checkbox" id="check"> 
+    <label for="check" class="checkbtn">
+        <i class="fa fa-bars"></i>
+    </label>
+    <label class="logo">ReadEase</label>
+    <ul class='navbar'>
+      <li id='aa'><a href="/"  >Home</a></li>
+      <li id='bb'><a href="/about">About Us</a></li>
+      <li id='cc'><a href="/features" class="active">Features</a></li>
+    </ul>
+</nav>
+<br>
+    <h3><ul class="ulinsreading">
+            <li onclick="toSound(this)" style="cursor:pointer">Read the short story provided below.</li>
+            <li onclick="toSound(this)" style="cursor:pointer">Take your time to observe each word visually before 
+            clicking the microphone button.</li>
+            <li onclick="toSound(this)" style="cursor:pointer">Click on the microphone button and start reading the story out loud.</li>
+        </ul></h3>
+    <a href="/record"><button id="recordbutton" class="learn" style="cursor:pointer"><img id="micimg" src="{{ url_for('static', filename='img/mic.png') }}"></button></a>
+    <h2 id="story" class='learn'>{{ speech }}</h2>
+    {% if not text%}
+    {% endif %}
+    {% if first_try == "yes" %}
+        <h3 class="readingcongrats">Congratulations! You got it on a first try</h3>
+        <img class="woohoo" src="{{url_for('static',filename='img/woohoo.png')}}"/> 
+        <a href="/audio"><button class="learn" id="startlearn" style="cursor:pointer">Learn Again?</button></a>
+    {% else %}
+        {% if text %}
+            <div class="incorrect">
+                
+                <p>You got {{ score }}% accuracy </p>
+                <p>Wrong words:  {{ ', '.join(incorrect) }}</p>
+            </div>
+            <img class="sad" src="{{url_for('static',filename='img/sad.png')}}"/> 
+            <a href="/speech"><button class="learn" id="startlearn2" style="cursor:pointer">Start Learning</button></a>
+        {% endif %}
+    {% endif %}
+{% endblock %}

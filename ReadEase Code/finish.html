@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<nav>
+    <input type="checkbox" id="check"> 
+    <label for="check" class="checkbtn">
+        <i class="fa fa-bars"></i>
+    </label>
+    <label class="logo">ReadEase</label>
+    <ul class='navbar'>
+      <li id='aa'><a href="/"  >Home</a></li>
+      <li id='bb'><a href="/about">About Us</a></li>
+      <li id='cc'><a href="/features" class="active">Features</a></li>
+    </ul>
+</nav>
+    <h2 class='learn' style='margin-left:30%;'>Congratulations! you got {{ score }} star</h2>
+    <h2 class='learn' style='margin-left:0%;text-align:center;'>You got this cute chibi! Practice more to get another chibi.</h2>
+    <div style="width:150%;height:200%;margin-left:30%;margin-top:0%">
+        {% if score <= 2 %}
+            <img src={{ url_for('static', filename='img/chibi1.png')}}>
+        {% elif score <= 4 %}
+            <img src={{ url_for('static', filename='img/chibi2.png')}}>
+        {% elif score <= 6 %}
+            <img src={{ url_for('static', filename='img/chibi3.png')}}>
+        {% elif score <= 8 %}
+            <img src={{ url_for('static', filename='img/chibi4.png')}}>
+        {% elif score <= 10 %}
+            <img src={{ url_for('static', filename='img/chibi5.png')}}>
+        {% elif score <= 100 %}
+            <img src={{ url_for('static', filename='img/chibi6.png')}}>
+        {% else %}
+            <img src={{ url_for('static', filename='img/chibi7.png')}}>
+        {% endif %}
+    </div>
+{% endblock %}
